@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection App</title>
+</head>
+<body>
+    <h1>Face Detection App</h1>
+    
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif">
+        <input type="submit" value="Upload and Detect">
+    </form>
 
+    {% if filename %}
+        <h2>Detected Faces:</h2>
+        <img src="{{ url_for('static', filename='result.jpg') }}" alt="Detected Faces">
+    {% endif %}
+</body>
+</html>
