@@ -19,23 +19,25 @@ def index():
 
 @app.route('/', methods=['POST'])
 def upload_file():
-    if 'file' not in request.files:
-        return redirect(request.url)
-    
-    file = request.files['file']
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            return redirect(request.url)
+        
+        file = request.files['file']
 
-    if file.filename == '':
-        return redirect(request.url)
+        if file.filename == '':
+            return redirect(request.url)
 
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(filepath)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(filepath)
 
-        # Call the face detection function
-        detect_faces(filepath)
+            # Call the face detection function
+            detect_faces(filepath)
 
-        return render_template('index.html', filename=filename)
-        # testing more
+            return render_template('index.html', filename=filename)
+
+    return render_template('index.html'
 if __name__ == '__main__':
     app.run(debug=True)
