@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,22 +9,29 @@
             margin: 0;
             padding: 0;
             width: 100%;
+            height: 100%;
         }
         .navbar {
             display: flex;
             justify-content: space-around;
-            background-color: #070a33;
+            background-color: #333;
             padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 14px 20px;
         }
-        .full-width-image {
+        .full-screen-image {
             width: 100%;
-            height: 100%;
-            display: flex;
+            height: 100vh; /* Viewport height */
+            background-image: url('your-opening-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .content-section {
             display: flex;
@@ -31,20 +39,20 @@
             align-items: center;
             padding: 20px;
             gap: 20px;
+            margin-top: 20px; /* Adjust based on your navbar height */
         }
-        .text-side {
+        .text-side, .image-side {
             flex-basis: 50%;
         }
-        .image-side {
-            flex-basis: 50%;
+        .image-side img {
+            width: 100%;
+            height: auto;
         }
         .footer {
-            background-color: #070a33;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
         @media (max-width: 768px) {
@@ -62,18 +70,22 @@
         <a href="#">Item 2</a>
     </nav>
 
-    <img src="WhatsApp Image 2024-02-08 at 17.46.24_b1e3fdfe.jpg" alt="Opening Image" class="full-width-image">
+    <div class="full-screen-image"></div>
 
     <div class="content-section">
         <div class="text-side">
             <h2>Section Title</h2>
             <p>This is a paragraph of text to accompany the side image. Adjust the content as needed to fit your website's theme or message.</p>
         </div>
-        <img src="your-side-image.jpg" alt="Side Image" class="image-side">
+        <div class="image-side">
+            <img src="your-side-image.jpg" alt="Side Image">
+        </div>
     </div>
 
     <div class="content-section">
-        <img src="another-side-image.jpg" alt="Another Side Image" class="image-side">
+        <div class="image-side">
+            <img src="another-side-image.jpg" alt="Another Side Image">
+        </div>
         <div class="text-side">
             <h2>Another Section Title</h2>
             <p>This paragraph is on the side of the second image. You can customize this text to suit your webpage's content requirements.</p>
@@ -81,7 +93,7 @@
     </div>
 
     <footer class="footer">
-        <p>Copyright &copy; 2024 Your Website Name</p>
+        <p Copyright &copy; 2024 Your Website Name</p>
     </footer>
 
 </body>
