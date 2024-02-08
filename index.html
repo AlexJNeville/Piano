@@ -48,20 +48,16 @@
             flex-basis: 50%;
         }
         .image-side {
-            width: 100%; /* Container takes up half the screen width */
-            height: auto;
-            padding: 5px;
-            box-sizing: border-box;
-            display: flex; /* Use flexbox for alignment */
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
         }
-        
         .image-side img {
-            background-size: cover;
+
             max-width: 100%; /* Image can be as wide as the container but no wider */
             max-height: 40vh; /* Limit image height but maintain aspect ratio */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensures the image is scaled properly within its container */
+
         }
         .footer {
             background-color: #0b0d38;
