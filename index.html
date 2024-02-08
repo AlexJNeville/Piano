@@ -24,7 +24,7 @@
             font-size: 18px;
             color: silver;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 8px 20px;
         }
         .image-container {
             width: calc(100%); /* Adjust width considering padding */
@@ -47,13 +47,20 @@
         .text-side, .image-side {
             flex-basis: 50%;
         }
-        .image-side img {
-            width: calc(100%); /* Adjust width considering padding */
-            height: 40%
+        .image-side {
+            width: 50%; /* Container takes up half the screen width */
             padding: 5px;
             box-sizing: border-box;
-            background-size: cover;
-            background-repeat: no-repeat;
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center the image vertically */
+            justify-content: center; /* Center the image horizontally */
+        }
+        
+        .image-side img {
+            max-width: 100%; /* Image can be as wide as the container but no wider */
+            max-height: 40vh; /* Limit image height but maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensures the image is scaled properly within its container */
         }
         .footer {
             background-color: #0b0d38;
