@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,17 +16,21 @@
             background-color: #333;
             padding: 10px 0;
             position: fixed;
-            width: 100%;
+            width: calc(100% - 10px); /* Adjust for padding */
             z-index: 1000;
+            left: 5px; /* Center navbar considering the padding */
+            box-sizing: border-box;
         }
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 14px 20px;
         }
-        .full-screen-image {
-            width: 100%;
-            height: 100vh; /* Viewport height */
+        .image-container {
+            width: calc(100% - 10px); /* Adjust width considering padding */
+            height: calc(100vh - 10px); /* Adjust height considering padding */
+            padding: 5px;
+            box-sizing: border-box;
             background-image: url('your-opening-image.jpg');
             background-size: cover;
             background-position: center;
@@ -70,7 +73,7 @@
         <a href="#">Item 2</a>
     </nav>
 
-     <img src="WhatsApp Image 2024-02-08 at 17.58.32_f6b72b45.jpg" alt="Opening Image" class="full-width-image">
+    <div class="image-container"></div>
 
     <div class="content-section">
         <div class="text-side">
@@ -98,4 +101,3 @@
 
 </body>
 </html>
-
