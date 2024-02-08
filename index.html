@@ -21,7 +21,7 @@
         }
         .navbar a {
             font-family: "Lucida Console", "Courier New", monospace;
-            font-size: 16px;
+            font-size: 20px;
             color: silver;
             text-decoration: none;
             padding: 14px 20px;
@@ -58,6 +58,10 @@
             padding: 20px 0;
             width: 100%;
         }
+         @media (max-width: 1080px) {
+            .image-container {
+                height: 60vh; /* Adjust height for mobile devices */
+            }
         @media (max-width: 768px) {
             .content-section {
                 flex-direction: column;
