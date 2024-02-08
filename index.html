@@ -1,21 +1,88 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Detection App</title>
+    <title>Example Webpage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+        .content-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .text-side {
+            flex-basis: 50%;
+        }
+        .image-side {
+            flex-basis: 50%;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Face Detection App</h1>
-    
-    <form action="/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif">
-        <input type="submit" value="Upload and Detect">
-    </form>
 
-    {% if filename %}
-        <h2>Detected Faces:</h2>
-        <img src="{{ url_for('static', filename='result.jpg') }}" alt="Detected Faces">
-    {% endif %}
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+    </nav>
+
+    <img src="your-opening-image.jpg" alt="Opening Image" class="full-width-image">
+
+    <div class="content-section">
+        <div class="text-side">
+            <h2>Section Title</h2>
+            <p>This is a paragraph of text to accompany the side image. Adjust the content as needed to fit your website's theme or message.</p>
+        </div>
+        <img src="your-side-image.jpg" alt="Side Image" class="image-side">
+    </div>
+
+    <div class="content-section">
+        <img src="another-side-image.jpg" alt="Another Side Image" class="image-side">
+        <div class="text-side">
+            <h2>Another Section Title</h2>
+            <p>This paragraph is on the side of the second image. You can customize this text to suit your webpage's content requirements.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2024 Your Website Name</p>
+    </footer>
+
 </body>
 </html>
+
