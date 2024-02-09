@@ -58,8 +58,8 @@
 
         .title {
             font-family: Baskerville, serif;
-            font-size: 108px;
-            color: #4e4f59;
+            font-size: 130px;
+            color: #101012;
             text-decoration: none;
             padding: 5px 30px;
             margin: 0; /* Removes default margin from h1 to control spacing more precisely */
@@ -105,7 +105,16 @@
                 width: 80%; /* Ensure the container takes up half the parent's width */
                 height: 40vh;
             }  
-
+            
+            .title {
+            font-family: Baskerville, serif;
+            font-size: 100px;
+            }
+            .content-container {
+            padding-left: 80px; /* Adjust as needed to move the title more to the right */
+            /* No specified width and height here to let it grow as per its child content */
+            }
+        }
         @media (max-width: 768px) {
             .content-section {
                 flex-direction: column;
@@ -117,9 +126,19 @@
             .image-container {
                 height: 45vh; /* Adjust height for mobile devices */
             }
+            
             .navbar a {
                 font-size: 15px;
             }
+            .title {
+            font-family: Baskerville, serif;
+            font-size: 60px;
+            }
+            .content-container {
+            padding-left: 40px; /* Adjust as needed to move the title more to the right */
+            /* No specified width and height here to let it grow as per its child content */
+            }
+        }
     </style>
 </head>
 <body>
