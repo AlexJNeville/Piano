@@ -55,10 +55,23 @@
             padding-left: 100px; /* Adjust as needed to move the title more to the right */
             /* No specified width and height here to let it grow as per its child content */
         }
+        .subheading-container {
+            padding-left: 120px;
+        }
 
         .title {
             font-family: Baskerville, serif;
             font-size: 130px;
+            text-decoration: none;
+            padding: 5px 30px;
+            margin: 0; /* Removes default margin from h1 to control spacing more precisely */
+            background: -webkit-linear-gradient(#383838,#030303);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-family: Baskerville, serif;
+            font-size: 90px;
             text-decoration: none;
             padding: 5px 30px;
             margin: 0; /* Removes default margin from h1 to control spacing more precisely */
@@ -179,6 +192,11 @@
             <h1 class="title">
                 Alex Neville
             </h1> 
+        </div>
+        <div class="subheading-container">
+            <h2 class"subtitle">
+                Pianist, Cellist, Accompianist
+            </h2>      
         </div>
     </div>
     <div class="line"></div>
