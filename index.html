@@ -37,12 +37,38 @@
 
             
         }
+        .title {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            color: black;
+            text-decoration: none;
+            padding: 15px 30px;
+        }
         .image-container {
             width: calc(100%); /* Adjust width considering padding */
             height: calc(100vh); /* Adjust height considering padding */
             padding: 5px;
             box-sizing: border-box;
             background-image: url('WhatsApp Image 2024-02-08 at 17.58.32_f6b72b45.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .image-container-1 {
+            width: calc(50%); /* Adjust width considering padding */
+            height: auto; /* Adjust height considering padding */
+            padding: 5px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .image-container-2 {
+            width: calc(50%); /* Adjust width considering padding */
+            height: auto; /* Adjust height considering padding */
+            left: 30px;
+            padding: 5px;
+            box-sizing: border-box;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -112,7 +138,16 @@
         <a href="#">Book a Gig</a>
     </nav>
 
-    <div class="image-container"></div>
+    <div class="image-container">
+        <div class="image-container-1">
+            <div class="image-container-2">
+                <h1 class="title">
+                    Alex Neville
+                </h1>
+                
+            </div>
+        </div>
+    </div>
     <div class="line"></div>
     <div class="content-section">
         <div class="text-side">
