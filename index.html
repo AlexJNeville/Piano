@@ -59,11 +59,12 @@
         .title {
             font-family: Baskerville, serif;
             font-size: 130px;
-            color: #101012;
             text-decoration: none;
             padding: 5px 30px;
             margin: 0; /* Removes default margin from h1 to control spacing more precisely */
-        
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .content-section {
             display: flex;
@@ -97,6 +98,19 @@
             padding: 20px 0;
             width: 100%;
         }
+         @media (max-width: 1400px) {
+            .title {
+            font-family: Baskerville, serif;
+            font-size: 100px;
+            }
+            .content-container {
+            padding-left: 70px; /* Adjust as needed to move the title more to the right */
+            /* No specified width and height here to let it grow as per its child content */
+            }
+
+             
+         }
+        
         @media (max-width: 1080px) {
             .image-container {
                 height: 60vh; /* Adjust height for mobile devices */
@@ -111,7 +125,7 @@
             font-size: 100px;
             }
             .content-container {
-            padding-left: 80px; /* Adjust as needed to move the title more to the right */
+            padding-left: 50px; /* Adjust as needed to move the title more to the right */
             /* No specified width and height here to let it grow as per its child content */
             }
         }
@@ -138,6 +152,17 @@
             padding-left: 40px; /* Adjust as needed to move the title more to the right */
             /* No specified width and height here to let it grow as per its child content */
             }
+        }
+        @media (max-width: 500px) {
+            .title {
+            font-family: Baskerville, serif;
+            font-size: 40px;
+            }
+            .content-container {
+            padding-left: 20px; /* Adjust as needed to move the title more to the right */
+            /* No specified width and height here to let it grow as per its child content */
+            }
+            
         }
     </style>
 </head>
