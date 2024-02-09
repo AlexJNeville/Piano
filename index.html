@@ -37,41 +37,33 @@
 
             
         }
-        .title {
-            font-family: Baskerville, serif;
-            font-size: 108px;
-            color: #4e4f59;
-            text-decoration: none;
-            padding: 5px 30px;
-        }
         .image-container {
-            width: calc(100%); /* Adjust width considering padding */
-            height: calc(100vh); /* Adjust height considering padding */
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
             padding: 5px;
             box-sizing: border-box;
             background-image: url('WhatsApp Image 2024-02-08 at 17.58.32_f6b72b45.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            display: flex;
+            align-items: center; /* This will help center the content-container vertically */
+            justify-content: flex-start; /* Aligns content-container to the start (left) of the main container */
         }
-        .image-container-1 {
-            width: calc(65%); /* Adjust width considering padding */
-            height: 50%; /* Adjust height considering padding */
-            down: 20vh;
-            padding: 5px;
-            box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+
+        .content-container {
+            padding-left: 100px; /* Adjust as needed to move the title more to the right */
+            /* No specified width and height here to let it grow as per its child content */
         }
-        .image-container-2 {
-            width: calc(70%); /* Adjust width considering padding */
-            height: 50%; /* Adjust height considering padding */
-            padding: 5px;
-            box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+
+        .title {
+            font-family: Baskerville, serif;
+            font-size: 108px;
+            color: #4e4f59;
+            text-decoration: none;
+            padding: 5px 30px;
+            margin: 0; /* Removes default margin from h1 to control spacing more precisely */
+        
         }
         .content-section {
             display: flex;
@@ -139,13 +131,10 @@
     </nav>
 
     <div class="image-container">
-        <div class="image-container-1">
-            <div class="image-container-2">
-                <h1 class="title">
-                    Alex Neville
-                </h1>
-                
-            </div>
+        <div class="content-container">
+            <h1 class="title">
+                Alex Neville
+            </h1> 
         </div>
     </div>
     <div class="line"></div>
