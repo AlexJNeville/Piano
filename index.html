@@ -154,7 +154,14 @@
           align-items: center; /* Centers content vertically */
           /* Add more styling here as needed */
         }
+        .grid-container {
+            width: 100%;
+            height:100%;
+            display:flex;
+            justify-content: center;
+        }
 
+        
          @media (max-width: 1400px) {
             .title {
             font-family: Baskerville, serif;
@@ -292,7 +299,9 @@
     </div>
     <div class="line"></div>
     <div class="grid-container">
-      <div class="grid-item"><p class="paragraph">
+      <div class="grid-item">
+          <div class="grid-container">
+              <p class="paragraph">
 Playing the piano has been a significant part of my life, a journey marked by achieving
 a distinction in Grade 8 and earning a Level 4 diploma. Beyond these accomplishments,
 accompanying choirs and delving into a wide range of repertoire has deepened my connection
@@ -301,8 +310,14 @@ constant in my life through ups and downs, and a bridge to others. My dedication
 piano has shaped me, blending discipline with emotional expression in a way that 
 feels both personal and universal. It's not just about the notes and performances,
 but the joy and growth I've found along the way.
-            </p></div>
-      <div class="grid-item"><img src="WhatsApp Image 2024-02-08 at 17.46.24_b1e3fdfe - Copy.jpg" alt="Side Image"></div>
+                </p>
+          </div>
+        </div>
+      <div class="grid-item">
+          <div class="grid-container">
+              <img src="WhatsApp Image 2024-02-08 at 17.46.24_b1e3fdfe - Copy.jpg" alt="Side Image">
+          </div>
+        </div>
       <div class="grid-item">Item 3</div>
       <div class="grid-item">Item 4</div>
     </div>
