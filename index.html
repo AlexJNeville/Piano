@@ -224,10 +224,17 @@
             font-family: Baskerville, serif;
             font-size: 42px;
             } 
-        .subheading-container {
-          
-            padding-left: 150px;
-        }
+            .subheading-container {
+              
+                padding-left: 150px;
+            }
+        .grid-container {
+            grid-template-columns: 1fr; /* Changes the grid to a single column */
+          }
+            .paragraph {
+                font-family: Baskerville, serif;
+                font-size: 17px;
+            }
 
         }
         @media (max-width: 768px) {
@@ -262,6 +269,10 @@
             padding-top: 5px;
             padding-left: 100px;
             }
+            .paragraph {
+                font-family: Baskerville, serif;
+                font-size: 15px;
+            }
         }
         @media (max-width: 500px) {
             .title {
@@ -284,9 +295,13 @@
             }
             @media (max-width: 350px) {
 
-            .subtitle {
-            font-family: Baskerville, serif;
-            font-size: 13px;      
+                .subtitle {
+                    font-family: Baskerville, serif;
+                    font-size: 13px;
+                .paragraph {
+                    font-family: Baskerville, serif;
+                    font-size: 11px;
+                }
             }
            
         }
