@@ -139,6 +139,21 @@
             text-decoration: none;
             color: #242424;
         }
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
+          grid-gap: 10px; /* Adjusts the gap between grid items */
+          width: 100%; /* Sets the width of the grid container to 100% of its parent */
+        }
+        
+        .grid-item {
+          height: 150px; /* Fixed height for each item, change as needed */
+          background-color: lightgray; /* Just for visualization */
+          display: flex;
+          justify-content: center; /* Centers content horizontally */
+          align-items: center; /* Centers content vertically */
+          /* Add more styling here as needed */
+        }
 
          @media (max-width: 1400px) {
             .title {
@@ -276,6 +291,21 @@
         </div>
     </div>
     <div class="line"></div>
+    <div class="grid-container">
+      <div class="grid-item"><p class="paragraph">
+Playing the piano has been a significant part of my life, a journey marked by achieving
+a distinction in Grade 8 and earning a Level 4 diploma. Beyond these accomplishments,
+accompanying choirs and delving into a wide range of repertoire has deepened my connection
+to music. For me, the piano isn't just an instrument; it's a way of expressing myself, a
+constant in my life through ups and downs, and a bridge to others. My dedication to
+piano has shaped me, blending discipline with emotional expression in a way that 
+feels both personal and universal. It's not just about the notes and performances,
+but the joy and growth I've found along the way.
+            </p></div>
+      <div class="grid-item"><img src="WhatsApp Image 2024-02-08 at 17.46.24_b1e3fdfe - Copy.jpg" alt="Side Image"></div>
+      <div class="grid-item">Item 3</div>
+      <div class="grid-item">Item 4</div>
+    </div>
 
     <div class="content-section">
         <div class="content-container-1">
