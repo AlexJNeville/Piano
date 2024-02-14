@@ -71,6 +71,23 @@
           
             padding-left: 250px;
         }
+        .standardcontainer {
+            width: 70vw; /* Full width of the viewport */
+            height: 50vh; /* Full height of the viewport */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            margin: 20px 20px 20px 20px;
+            justify-content: center; /* Center the image horizontally */
+            align-items: center; /* Center the image vertically */
+            overflow: hidden; /* Ensures the image does not overflow the container */
+        }
+        
+        .standardcontainer img {
+            max-width: 100%; /* Maximum image width is 100% of the container */
+            max-height: 100%; /* Maximum image height is 100% of the container */
+            object-fit: cover; /* Cover the container, might crop the image */
+        }
 
         .title {
             font-family: Baskerville, serif;
@@ -378,7 +395,10 @@ the beauty of blending my voice with others to create something larger than ours
 
           </div>
         </div>
-
+    
+    </div>
+    <div class="standardcontainer">
+        <img src="WhatsApp Image 2024-02-08 at 17.58.32_f6b72b45.jpg" alt="Descriptive Text">
     </div>
 
     <footer class="footer">
