@@ -36,9 +36,15 @@
             background-color: black;
             box-sizing: border-box;
             padding-block: 20px;
-            opacity: 0.85;
-
-            
+            opacity: 0.8;
+        }
+        .line2 {
+            width: calc(70%);
+            height: 2px;
+            background-color: #bdbdbd;
+            box-sizing: border-box;
+            padding-block: 20px;
+            opacity: 1;
         }
         .image-container {
             width: 100vw; /* Full width of the viewport */
@@ -159,6 +165,14 @@
             color: #242424;
             margin: 5px;
         }
+        .subheading {
+            text-align: center;
+            font-family: Baskerville, serif;
+            font-size: 41px;
+            text-decoration: none;
+            color: #242424;
+            margin: 0 0 30px 0;
+        }
         .grid-container {
         
           display: grid;
@@ -168,7 +182,8 @@
             top: 20px;
         }
         .grid-container-back {
-            background-color: #c7c7c7;
+            margin: 40px 70px 0 70px;
+            background-color: #e6e6e6;
           display: grid;
           grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
           grid-gap: 10px; /* Adjusts the gap between grid items */
@@ -364,6 +379,7 @@
       <div class="grid-item">
           <div class="grid-container-text">
               <h2 class="subheading">Me and Piano</h2>
+              <div class="line2"></div>
               <p class="paragraph">
 Playing the piano has been a significant part of my life, a journey marked by achieving
 a distinction in Grade 8 and earning a Level 4 diploma. Beyond these accomplishments,
@@ -392,6 +408,7 @@ but the joy and growth I've found along the way.
       <div class="grid-item">
           <div class="grid-container-text">
               <h2 class="subheading">The art of cello</h2>
+              <div class="line2"></div>
             <p class="paragraph">    
 Playing the cello has woven deeply into the fabric of my identity, 
 enriching my life beyond measure. My experiences with orchestras and ensembles have been
@@ -413,6 +430,7 @@ the beauty of blending my voice with others to create something larger than ours
       <div class="grid-item">
           <div class="grid-container-text">
               <h2 class="subheading">Accompanying</h2>
+              <div class="line2"></div>
           </div>
       </div>
         <div class="grid-item">
@@ -427,6 +445,7 @@ the beauty of blending my voice with others to create something larger than ours
               </p>       
           </div>
       </div>
+    </div>
 
     <footer class="footer">
         <p Copyright &copy; 2024 Your Website Name</p>
