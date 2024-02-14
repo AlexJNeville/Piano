@@ -66,9 +66,9 @@
         .content-container {
             width: 100%;
             padding-top: 35vh;
-            padding-left: -600px; /* Adjust as needed to move the title more to the right */
-            /* No specified width and height here to let it grow as per its child content */
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 41px #fff,0 0 46px #fff;
+            /* Removed the negative padding-left as it is not a valid way to move content to the right */
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 41px #fff, 0 0 46px #fff;
+            /* Adjust other properties as needed */
         }
         .content-container-1 {
             width: 50%;
@@ -100,10 +100,9 @@
             text-decoration: none;
             padding: 5px 30px;
             margin: 0; /* Removes default margin from h1 to control spacing more precisely */
-            color: black;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            
+            color: black; /* Sets title color to black */
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff; /* Example white shadow */
+            /* Removed the -webkit-background-clip and -webkit-text-fill-color properties */
         }
         .subtitle {
             font-family: Baskerville, serif;
