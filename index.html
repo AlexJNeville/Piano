@@ -238,6 +238,16 @@
             padding: 20px;
             margin: 20x 20px 20px 20px;
         }
+        .hidden {
+          opacity: 0;
+          transform: translateY(20px); /* Adjust as needed */
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
 
         
          @media (max-width: 1400px) {
@@ -469,7 +479,8 @@ the beauty of blending my voice with others to create something larger than ours
     
     </div>
     <div class="line"></div>
-    <div class="floating-element">Hello, I'm floating!</div>
+    <div id="trigger"></div> <!-- This is the trigger point -->
+    <div id="element" class="hidden">Hello, I'm floating!</div>
     <div class="standardcontainer"></div>
     <div class="line"></div>
     <div class="grid-container-back">
