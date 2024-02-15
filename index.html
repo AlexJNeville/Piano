@@ -199,7 +199,14 @@
           grid-gap: 10px; /* Adjusts the gap between grid items */
           width: 100%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
+             transform: translateY(40%);
+          transition: all 2s ease-out;
         }
+        .active {
+          opacity: 4;
+          transform: translateY(0);
+        }
+        
         .grid-container-back {
             margin: 40px 10% 0 10%;
             background-color: #e6e6e6;
