@@ -237,6 +237,29 @@
             padding: 20px;
             margin: 20x 20px 20px 20px;
         }
+        .floating-element {
+          position: fixed;
+          bottom: -50px; /* Initially off-screen */
+          left: 50%; /* Adjust as needed for horizontal positioning */
+          transform: translateX(-50%); /* Center horizontally */
+          background-color: #ffffff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          opacity: 0; /* Initially invisible */
+          animation: floatUp 0.5s ease-out forwards; /* Animation to float up */
+        }
+        
+        @keyframes floatUp {
+          0% {
+            bottom: -50px;
+            opacity: 0;
+          }
+          100% {
+            bottom: 20px; /* Adjust final position */
+            opacity: 1;
+          }
+        }
 
         
          @media (max-width: 1400px) {
@@ -467,6 +490,7 @@ the beauty of blending my voice with others to create something larger than ours
     
     </div>
     <div class="line"></div>
+    <div class="floating-element">Hello, I'm floating!</div>
     <div class="standardcontainer"></div>
     <div class="line"></div>
     <div class="grid-container-back">
