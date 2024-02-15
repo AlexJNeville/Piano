@@ -1,14 +1,17 @@
-document.addEventListener("scroll", function() {
-  var element = document.getElementById("element");
-  var trigger = document.getElementById("trigger");
-  var triggerPosition = trigger.getBoundingClientRect().top;
-  var scrollPosition = window.innerHeight;
-
-  if (triggerPosition < scrollPosition) {
-    element.classList.add("visible");
-    element.classList.remove("hidden");
-  } else {
-    element.classList.remove("visible");
-    element.classList.add("hidden");
-  }
+const elements = document.querySelectorAll('.fade-in');
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .4
+}
+const callbacks = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+}
+let observer = new IntersectionObserver(callbacks, options);
+elements.forEach(element => {
+  observer.observe(element);
 });
