@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('.grid-container');
+const elements = document.querySelectorAll('.fade-in');
 const options = {
   root: null,
   rootMargin: '0px',
