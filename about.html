@@ -205,7 +205,6 @@
             margin: 0 0 30px 0;
         }
         .grid-container {
-        
           display: grid;
           grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
           grid-gap: 10px; /* Adjusts the gap between grid items */
@@ -215,13 +214,13 @@
         }
     
         .grid-container-back {
-            margin: 40px 10% 40px 10%;
+            display: grid;
             background-color: #e6e6e6;
-          display: grid;
           grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
           grid-gap: 10px; /* Adjusts the gap between grid items */
-          width: 80%; /* Sets the width of the grid container to 100% of its parent */
+          width: 100%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
+
         }
         
         .grid-item {
@@ -442,8 +441,8 @@
         <div class="line-thin"></div>
         <h1 class="subheading">My Journey</h1>
         <div class="line-thin"></div>
-        <div class="lessspace"></div>
-            <div class="grid-container">
+        <div class="space"></div>
+            <div class="grid-container-back">
               <div class="grid-item">
                   <div class="grid-container-text">
                       <h2 class="subheading">Beginnings</h2>
