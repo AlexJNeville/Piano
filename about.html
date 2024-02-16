@@ -297,10 +297,12 @@
             margin: 0 0 0 63vw;
         }
         .triangle-left {
-            width: 0;
-            height: 0;
-            border-bottom: 30vh solid transparent; /* Half the height */
-            border-left: 40vw solid blue;
+          width: 40vw; /* Width of the triangle */
+          height: 30vh; /* Height of the triangle */
+          background-image: url('piano.png'); /* Path to your image */
+          clip-path: polygon(0% 100%, 0 0, 100% 100%); /* Creates a left-pointing triangle */
+          background-size: cover; /* Ensure the background covers the entire area */
+          background-position: center; /* Center the background image */
         }
         .vertical-space {
             width: 10%;
