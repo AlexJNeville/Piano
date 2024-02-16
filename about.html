@@ -283,12 +283,14 @@
             background: red linear-gradient(red,blue);
             clip-path: polygon(0%100%, 100% 0%, 100% 100%);
         }
-        .triangle {
-          width: 300px;
-          height: 300px;
-          background: red linear-gradient(red, blue);
-          clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 500px solid transparent; /* Half the height */
+            border-bottom: 500px solid transparent; /* Half the height */
+            border-left: 1000px solid blue; /* Width of the triangle and color */
         }
+
          @media (max-width: 1400px) {
             .title {
             font-family: Baskerville, serif;
@@ -526,7 +528,7 @@ I am now looking to play piano in restaurants, carehomes or other occasions, to 
                 </div>
    
             </div>
-        <div class="triangle"></div>
+        <div class="triangle-right"></div>
         <footer class="footer">
             <p Copyright &copy; 2024 Your Website Name</p>
         </footer>
