@@ -251,7 +251,18 @@
             left: -100px;
             padding: 20px;
             margin: 20x 20px 20px 20px;
-        }     
+        }
+        .standard-image-container {
+            width: 100%;
+            height:650px;
+            display:flex;
+            justify-content: center;
+        }
+        .standard-image-container img {
+          width: 100%; /* Make the image width equal to that of its container */
+          height: 100%; /* Make the image height equal to that of its container */
+          object-fit: cover; /* Cover the container without losing the aspect ratio */
+        }
          @media (max-width: 1400px) {
             .title {
             font-family: Baskerville, serif;
@@ -431,6 +442,30 @@
         <h1 class="subheading">My Journey</h1>
         <div class="line-thin"></div>
         <div class="lessspace"></div>
+            <div class="grid-container">
+              <div class="grid-item">
+                  <div class="grid-container-text">
+                      <h2 class="subheading">Beginnings</h2>
+                      <div class="lessspace"></div>
+                      <div class="line-thin-short"></div>
+                      <div class="standard-image-container">
+                          <img src="Pianoimage1.jpg">
+                  </div>
+                </div>
+              <div class="grid-item">
+                  <div class="grid-container-text">
+                        <p class="paragraph">
+I started playing piano from the age of 5 taking in school lessons, and making steady progress, enjoying every moment of it. After a couple of years learning in Worcester my family moved to Malvern,
+where I had piano lessons with my remaining teacher Tim Sidford, an outstanding pianist with a collection of awards, achievements and even the honour of playing infront of the late queen.
+Around the same time I started playing the cello, and instrument that I am not as comfident at, but still play in an array of orchestras, such as the Worcestershire youth orchestra, as well
+as being invited to the National School Symphony Orchestra, and participating in the Youth English Symphony Orchestra. All moments which I cherish.
+When I was 12, lockdown hit and we were all thrown inside, and my piano also ground to a halt, as the inability of being able to go to lesson
+lessened motivation for both the piano and cello, and both were halted momenteraly.
+                        </p>
+                  </div>
+                </div>
+
+    </div>
         <footer class="footer">
             <p Copyright &copy; 2024 Your Website Name</p>
         </footer>
