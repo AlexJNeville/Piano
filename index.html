@@ -243,7 +243,29 @@
             left: -100px;
             padding: 20px;
             margin: 20x 20px 20px 20px;
-        }     
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* Full viewport height */
+            }
+            
+            .styled-button {
+                display: inline-block;
+                background-color: #00008B; /* Dark blue */
+                color: #C0C0C0; /* Silver */
+                text-decoration: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 20px; /* Curved corners */
+                transition: background-color 0.3s, color 0.3s;
+            }
+            
+            .styled-button:hover {
+                background-color: #0000CD; /* Slightly lighter blue on hover */
+                color: #FFFFFF; /* White text on hover */
+            }
          @media (max-width: 1400px) {
             .title {
             font-family: Baskerville, serif;
@@ -495,6 +517,10 @@ the beauty of blending my voice with others to create something larger than ours
           </div>
       </div>
     </div>
+    <div class="button-container">
+        <a href="about.html" class="styled-button">Learn More</a>
+    </div>
+    
     <footer class="footer">
         <p Copyright &copy; 2024 Your Website Name</p>
     </footer>
