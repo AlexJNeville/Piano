@@ -1,4 +1,4 @@
-const boxes = document.querySelectorAll('.grid-container');
+const boxes = document.querySelectorAll('.grid-container-back');
 
 window.addEventListener'scroll',checkBoxes);
 checkBoxes();
