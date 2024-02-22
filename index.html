@@ -203,8 +203,21 @@
           grid-gap: 10px; /* Adjusts the gap between grid items */
           width: 100%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
-
+            opacity: 0;
+            transform: translateY(300px);
+            transition: all 0.5s ease-out;
         }
+        .grid-container-animation {
+        
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
+          grid-gap: 10px; /* Adjusts the gap between grid items */
+          width: 100%; /* Sets the width of the grid container to 100% of its parent */
+            top: 20px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
     
         .grid-container-back {
             margin: 40px 10% 40px 10%;
@@ -214,6 +227,21 @@
           grid-gap: 10px; /* Adjusts the gap between grid items */
           width: 80%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
+            opacity: 0;
+            transform: translateY(300px);
+            transition: all 0.5s ease-out;
+        }
+        .grid-container-back-animation {
+            margin: 40px 10% 40px 10%;
+            background-color: #e6e6e6;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
+          grid-gap: 10px; /* Adjusts the gap between grid items */
+          width: 80%; /* Sets the width of the grid container to 100% of its parent */
+            top: 20px;
+            opacity: 1;
+            transform: translateY(0);
+
         }
         
         .grid-item {
@@ -419,7 +447,7 @@
            
         }
     </style>
-    <script defer src="myscripts.js"></script>
+    <script defer src="app.js"></script>
 </head>
 <body>
 
