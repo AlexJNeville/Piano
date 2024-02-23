@@ -1,24 +1,35 @@
-const theanimation = document.querySelectorAll('.grid-container')
+const theanimation = document.querySelectorAll('.grid-container');
 
-const observer1 = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver(
+  (entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('grid-container-animation')
-        }
-            else {
-                entry.target.classList.remove('grid-container-animation')
-            }
-        
-    })
-},
-   { threshold: 0.3
-   });
-//
-  for (let i = 0; i < theanimation.length; i++) {
-   const elements = theanimation[i];
+      // Calculate top and bottom positions of the element relative to the viewport
+      const topEdgeDistance = entry.boundingClientRect.top - entry.rootBounds.top;
+      const bottomEdgeDistance = entry.rootBounds.bottom - entry.boundingClientRect.bottom;
 
-    observer1.observe(elements);
-  } 
+      // Define the dead zone in pixels
+      const deadZone = 10; // 10 pixels for top and bottom dead zones
+
+      // Check if the element is within the viewport but outside the dead zones
+      if (
+        entry.isIntersecting &&
+        topEdgeDistance > deadZone &&
+        bottomEdgeDistance > deadZone
+      ) {
+        entry.target.classList.add('grid-container-animation');
+      } else {
+        entry.target.classList.remove('grid-container-animation');
+      }
+    });
+  },
+  {
+    threshold: 0.1
+  }
+);
+
+theanimation.forEach((element) => {
+  observer1.observe(element);
+});
 
 const the_animation = document.querySelectorAll('.grid-container-back')
 
