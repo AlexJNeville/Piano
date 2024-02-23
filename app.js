@@ -11,7 +11,7 @@ const observer1 = new IntersectionObserver((entries) => {
         
     })
 },
-   { threshold: 0.1
+   { threshold: 0.5
    });
 //
   for (let i = 0; i < theanimation.length; i++) {
@@ -33,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
         
     })
 },
-   { threshold: 0.1
+   { threshold: 0.5
    });
 //
   for (let i = 0; i < the_animation.length; i++) {
