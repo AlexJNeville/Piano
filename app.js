@@ -8,7 +8,7 @@ const observer1 = new IntersectionObserver(
       const bottomEdgeDistance = entry.rootBounds.bottom - entry.boundingClientRect.bottom;
 
       // Define the dead zone in pixels
-      const deadZone = 1px; // 10 pixels for top and bottom dead zones
+      const deadZone = 1; // 10 pixels for top and bottom dead zones
 
       // Check if the element is within the viewport but outside the dead zones
       if (
