@@ -1,54 +1,32 @@
-const theanimation = document.querySelectorAll('.grid-container');
+document.addEventListener('DOMContentLoaded', function () {
+    const aosItems = document.querySelectorAll('.aos-item');
 
-const observer1 = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      // Calculate top and bottom positions of the element relative to the viewport
-      const topEdgeDistance = entry.boundingClientRect.top - entry.rootBounds.top;
-      const bottomEdgeDistance = entry.rootBounds.bottom - entry.boundingClientRect.bottom;
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
 
-      // Define the dead zone in pixels
-      const deadZone = 1; // 10 pixels for top and bottom dead zones
+    function handleScroll() {
+        aosItems.forEach(item => {
+            const aosType = item.getAttribute('data-aos');
+            const hasAnimationClass = item.classList.contains(`aos-${aosType}`);
 
-      // Check if the element is within the viewport but outside the dead zones
-      if (
-        entry.isIntersecting &&
-        topEdgeDistance > deadZone &&
-        bottomEdgeDistance > deadZone
-      ) {
-        entry.target.classList.add('grid-container-animation');
-      } else {
-        entry.target.classList.remove('grid-container-animation');
-      }
-    });
-  },
-  {
-    threshold: 0.1
-  }
-);
-
-theanimation.forEach((element) => {
-  observer1.observe(element);
-});
-
-const the_animation = document.querySelectorAll('.grid-container-back')
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('grid-container-back-animation')
-        }
-            else {
-                entry.target.classList.remove('grid-container-animation')
+            if (isElementInViewport(item) && !hasAnimationClass) {
+                // Add the animation class
+                item.classList.add(`aos-${aosType}`);
+            } else if (!isElementInViewport(item) && hasAnimationClass) {
+                // Remove the animation class if the element is no longer in view
+                item.classList.remove(`aos-${aosType}`);
             }
-        
-    })
-},
-   { threshold: 0.3
-   });
-//
-  for (let i = 0; i < the_animation.length; i++) {
-   const elements = the_animation[i];
+        });
+    }
 
-    observer.observe(elements);
-  } 
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    // Initial check on page load
+    handleScroll();
+});
