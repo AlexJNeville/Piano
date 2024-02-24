@@ -1,32 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const aosItems = document.querySelectorAll('.aos-item');
+const boxes = document.querySelectorAll('.box');
 
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes();
+
+function checkBoxes() {
+  const triggerBottom = window.innerHeight / 5 * 4;
+  boxes.forEach((box, idx) => {
+    const boxTop = box.getBoundingClientRect().top;
+    
+    if(boxTop < triggerBottom) {
+      box.classList.add('show');
+    } else {
+      box.classList.remove('show');
     }
-
-    function handleScroll() {
-        aosItems.forEach(item => {
-            const aosType = item.getAttribute('data-aos');
-            const hasAnimationClass = item.classList.contains(`aos-${aosType}`);
-
-            if (isElementInViewport(item) && !hasAnimationClass) {
-                // Add the animation class
-                item.classList.add(`aos-${aosType}`);
-            } else if (!isElementInViewport(item) && hasAnimationClass) {
-                // Remove the animation class if the element is no longer in view
-                item.classList.remove(`aos-${aosType}`);
-            }
-        });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-
-    // Initial check on page load
-    handleScroll();
-});
+  });
+}
