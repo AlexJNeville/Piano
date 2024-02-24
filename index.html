@@ -203,18 +203,16 @@
           grid-gap: 10px; /* Adjusts the gap between grid items */
           width: 100%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform:translateX(200%);
+          transition: transform 0.4s ease
         }
-        .aos-item.aos-fade-up {
+        .grid-container.show {
           display: grid;
           grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, each taking up equal space */
           grid-gap: 10px; /* Adjusts the gap between grid items */
           width: 100%; /* Sets the width of the grid container to 100% of its parent */
             top: 20px;
-            opacity: 1;
-            transform: translateY(0);
+            transform: translate(0);
         }
         
     
