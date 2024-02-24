@@ -6,13 +6,13 @@ checkBoxes();
 
 function checkBoxes() {
   const triggerBottom = window.innerHeight / 5 * 4;
-  boxes.forEach((box, idx) => {
-    const boxTop = box.getBoundingClientRect().top;
+  boxes.forEach((grid-container, idx) => {
+    const boxTop = grid-container.getBoundingClientRect().top;
     
     if(boxTop < triggerBottom) {
-      box.classList.add('show');
+      grid-container.classList.add('show');
     } else {
-      box.classList.remove('show');
+      grid-container.classList.remove('show');
     }
   });
 }
